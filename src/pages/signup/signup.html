@@ -1,0 +1,30 @@
+
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Signup Page
+    </ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+
+
+<ion-content>
+
+      <form [formGroup]="SignupForm" (ngSubmit)="signUpForm()">
+        <ion-item>
+          <ion-label>Username</ion-label>
+          <ion-input type="text" formControlName="username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>password</ion-label>
+          <ion-textarea formControlName="password"></ion-textarea>
+        </ion-item>
+        <button ion-button [disabled]="!SignupForm.valid" type="submit" block>Signup</button>
+      </form>
+
+    
+</ion-content>
